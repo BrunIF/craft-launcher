@@ -40,6 +40,7 @@ impl Backend for Fake {
 struct NoHost;
 impl Host for NoHost {}
 
+/// A macOS release of the app `id` at version `v`, published at `at`.
 fn release(id: &str, v: &str, at: i64) -> Release {
     let name = format!("{id}-{v}-macos-universal.dmg");
     Release {
@@ -59,6 +60,9 @@ fn release(id: &str, v: &str, at: i64) -> Release {
     }
 }
 
+/// The startup events: a latest release and a detection for every app, one job at the verifying
+/// phase, a finished check three minutes ago, and a backend message shown through its `@msg`
+/// template.
 fn events() -> Vec<Event> {
     let mut ev = Vec::new();
     for (i, app) in SUITE.iter().enumerate() {
@@ -79,6 +83,8 @@ fn events() -> Vec<Event> {
     ev
 }
 
+/// The launcher UI in Ukrainian, in the given view, over the fake backend from [`events`]. The UI
+/// language is process-wide, so this binary holds a single test.
 fn harness(view: ViewMode) -> Harness<'static, Option<LauncherUi>> {
     artcraft_launcher_ui_egui::i18n::set_test_lang(artcraft_launcher_ui_egui::i18n::Lang::EN);
     let mut backend = Some(Fake { events: events(), clock: Rc::new(Cell::new(NOW)) });
@@ -100,6 +106,7 @@ fn harness(view: ViewMode) -> Harness<'static, Option<LauncherUi>> {
     )
 }
 
+/// Save a PNG of `h` under `ARTCRAFT_LAUNCHER_SNAPSHOTS`, if that directory is set.
 fn snapshot(h: &mut Harness<'_, Option<LauncherUi>>, name: &str) {
     let Some(dir) = std::env::var_os("ARTCRAFT_LAUNCHER_SNAPSHOTS") else { return };
     let img = h.render().unwrap();

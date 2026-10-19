@@ -25,10 +25,12 @@ fn rows(lang: &LangInfo) -> Vec<(usize, &str, &str, &str)> {
     out
 }
 
+/// Every catalog that carries rows (English is the built-in source, with no file of its own).
 fn catalogs() -> impl Iterator<Item = &'static LangInfo> {
     LANGUAGES.iter().filter(|l| !l.source.is_empty())
 }
 
+/// The `{name}` placeholders a source or translation line carries, for comparison.
 fn placeholders(template: &str) -> BTreeSet<String> {
     let mut out = BTreeSet::new();
     let mut rest = template;

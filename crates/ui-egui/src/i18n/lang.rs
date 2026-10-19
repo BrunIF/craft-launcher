@@ -266,6 +266,7 @@ impl Lang {
     pub const PL: Lang = Lang(&LANGUAGES[8]);
     pub const HU: Lang = Lang(&LANGUAGES[9]);
     pub const JA: Lang = Lang(&LANGUAGES[10]);
+    /// The canonical `uk` code, so call sites can name Ukrainian without a lookup.
     pub const UK: Lang = Lang(&LANGUAGES[11]);
 
     pub fn code(self) -> &'static str {
