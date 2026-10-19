@@ -149,7 +149,7 @@
 
 # Package formats offered for download (PackageKind::label)
 	Installer (.msi)	Програма встановлення (.msi)
-	Portable (.zip)	Переносна версія (.zip)
+	Portable (.zip)	Портативна версія (.zip)
 	Disk image (.dmg)	Образ диска (.dmg)
 	Debian package (.deb)	Пакет Debian (.deb)
 	RPM package (.rpm)	Пакет RPM (.rpm)
