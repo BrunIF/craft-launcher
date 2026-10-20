@@ -1,13 +1,13 @@
-# Ukrainian (uk) catalog for ArtCraft Launcher.
+# Russian (ru) catalog for ArtCraft Launcher.
 # Format: context<TAB>source<TAB>translation
 # Empty context = plain UI string (tl!, t).
 # @id = command-id keyed (tr_id).
-# @plural = plural forms: one|other (English) or one|few|many (Ukrainian).
+# @plural = plural forms: one|other (English) or one|few|many (Russian).
 # @msg = status/error message template (message, msg).
 # Other context = disambiguation for tr_ctx.
 #
-# Clean-room: written from the meaning of ArtCraft Launcher's English labels in clear,
-# idiomatic Ukrainian for users of creative software.
+# Clean-room: written from the meaning of ArtCraft Launcher's English labels in neutral,
+# international Russian, using terms Russian-speaking users of creative software know.
 #
 # Coverage: the whole interface — every menu string and tl! literal (complete_menus = true).
 # Left in English on purpose: product name "ArtCraft Launcher" (and its "Launcher" tag), suite
@@ -75,6 +75,7 @@
 	Dismiss	Закрити
 	Update and restart	Оновити й перезапустити
 	A new version is available. Would you like to relaunch with the updated version?	Доступна нова версія. Перезапустити з оновленою версією?
+	A new version is available. Download it to replace this version?	Доступна нова версія. Завантажте її, щоб замінити цю версію?
 	Later	Пізніше
 	What's new	Що нового
 	No notes were published with this release.	До цього випуску примітки не опубліковано.
@@ -136,14 +137,14 @@
 	Loading ArtCraft Launcher…	Завантаження ArtCraft Launcher…
 	Cancel update	Скасувати оновлення
 	Stop waiting; the update can be started again later	Припинити чекати; оновлення можна буде запустити знову пізніше
-	Download again	Завантажити ще раз
+	Download again	Завантажити знову
 	Install cancelled	Встановлення скасовано
 	Install cancelled. The download is kept for the next try.	Встановлення скасовано. Завантажений файл збережено для наступної спроби.
 	Update cancelled	Оновлення скасовано
 	Uninstall cancelled	Видалення скасовано
 	Retry install	Повторити встановлення
 	Retry update to {version}	Повторити оновлення до {version}
-	The download is still here. It's checked again, then installed.	Завантажений файл усе ще на місці. Його перевірять ще раз, а потім встановлять.
+	The download is still here. It's checked again, then installed.	Завантажений файл усе ще на місці. Його перевірять знову, а потім встановлять.
 	Waiting for another app…	Очікування іншого застосунку…
 	Waiting for other installs…	Очікування інших встановлень…
 
@@ -257,13 +258,12 @@ column	App	Застосунок
 column	Installed	Встановлена
 column	Latest	Остання
 column	Released	Дата випуску
-column	Version	Версія
 
 # Contextual: the filter tab names a group (the status pill says "Installed")
 filter	Installed	Встановлені
 	{name} details	{name}: подробиці
 
-# Plural forms for Ukrainian (one|few|many)
+# Plural forms for Russian (one|few|many)
 @plural	{n} app|{n} apps	{n} застосунок|{n} застосунки|{n} застосунків
 @plural	{n} min ago|{n} min ago	{n} хвилину тому|{n} хвилини тому|{n} хвилин тому
 @plural	{n} h ago|{n} h ago	{n} годину тому|{n} години тому|{n} годин тому
@@ -277,7 +277,7 @@ filter	Installed	Встановлені
 @msg	{name} updated to {version} (this release publishes no checksum, so only its size was checked)	Застосунок {name} оновлено до {version} (у цьому випуску немає контрольних сум, тому перевірено лише розмір)
 @msg	{name} installed: {version} (this release publishes no checksum, so only its size was checked)	Застосунок {name} встановлено: {version} (у цьому випуску немає контрольних сум, тому перевірено лише розмір)
 @msg	{name} was removed	Застосунок {name} видалено
-@msg	{name} is running. Quit it, then try again.	Застосунок {name} запущено. Закрийте його та спробуйте ще раз.
+@msg	{name} is running. Quit it, then try again.	Застосунок {name} запущено. Закрийте його та спробуйте знову.
 @msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with {cmd} or sudo pacman -Syu	Застосунок {name} встановлено з репозиторію {repo} або з AUR ({pkg}). Оновіть його командою {cmd} або sudo pacman -Syu
 @msg	{name} was installed from the {repo} repository or the AUR ({pkg}). Update it with your AUR helper (for example: yay -S {pkg}) or sudo pacman -Syu	Застосунок {name} встановлено з репозиторію {repo} або з AUR ({pkg}). Оновіть його за допомогою вашого помічника AUR (наприклад: yay -S {pkg}) або командою sudo pacman -Syu
 @msg	{name} was installed from the AUR ({pkg}). Update it with {cmd}	Застосунок {name} встановлено з AUR ({pkg}). Оновіть його командою {cmd}
@@ -345,7 +345,7 @@ filter	Installed	Встановлені
 	Previous picture (←)	Попереднє зображення (←)
 	Next picture (→)	Наступне зображення (→)
 	Loading pictures…	Завантаження зображень…
-	Pictures couldn't be loaded. Reopen this page to try again.	Не вдалося завантажити зображення. Відкрийте цю сторінку ще раз.
+	Pictures couldn't be loaded. Reopen this page to try again.	Не вдалося завантажити зображення. Відкрийте цю сторінку знову.
 @plural	ArtCraft Launcher · {n} update available|ArtCraft Launcher · {n} updates available	ArtCraft Launcher · {n} оновлення|ArtCraft Launcher · {n} оновлення|ArtCraft Launcher · {n} оновлень
 	Install folder	Папка встановлення
 	Default install folder	Папка встановлення за замовчуванням
@@ -353,7 +353,8 @@ filter	Installed	Встановлені
 	Browse…	Огляд…
 	Use default	Скористатися значенням за замовчуванням
 	New installs use this folder. Updates stay in their current location.	Нові застосунки встановлюються в цю папку. Під час оновлення поточне розташування зберігається.
-	Custom folders use AppImage on Linux.	Для власних папок у Linux використовується AppImage.
+	Custom folders use AppImage on Linux.	Для власних папок установлення в Linux використовується AppImage.
+	On Linux, custom folders use AppImage format.	У Linux для власних папок установлення використовується формат AppImage.
 	The system manages install locations here.	Тут розташуванням застосунків керує система.
 @msg	couldn't use install folder {path}: {reason}	не вдалося використати папку встановлення {path}: {reason}
 @msg	this release has no AppImage for a custom install folder	у цьому випуску немає AppImage для власної папки встановлення
@@ -372,3 +373,4 @@ filter	Installed	Встановлені
 	Previous app	Попередній застосунок
 	Show {n} more changes	Показати ще {n} змін
 	Last updated: {date}	Востаннє оновлено: {date}
+column	Version	Версія
